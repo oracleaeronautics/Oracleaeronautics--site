@@ -4,86 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Oracle Aeronautics — Aircraft Maintenance Consulting</title>
-  <meta name="description" content="Oracle Aeronautics provides aircraft maintenance consulting: maintenance programs, prebuy & records, and on-call AOG support.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0a0b0f;         /* near-black */
-      --ink:#f2f5f7;        /* off-white */
-      --muted:#a9b2bd;      /* cool gray */
-      --card:#121420;       /* dark panel */
-      --line:rgba(255,255,255,.12);
-      --accent:#00e5ff;     /* electric cyan */
-      --accent2:#8aa0ff;    /* soft indigo */
+    :root {
+      --bg: #0a0b0f; --ink: #f2f5f7; --muted: #a9b2bd;
+      --accent: #00e5ff; --accent2: #8aa0ff; --line: rgba(255,255,255,.12);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Outfit',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
-
-    header{
-      position:sticky;top:0;z-index:10;
-      backdrop-filter:saturate(1.2) blur(6px);
-      background:linear-gradient(180deg, rgba(10,11,15,.90), rgba(10,11,15,.35));
-      border-bottom:1px solid var(--line)
+    body {
+      margin:0; font-family:'Outfit',sans-serif;
+      background:var(--bg); color:var(--ink);
+      display:flex; align-items:center; justify-content:center;
+      min-height:100vh; text-align:center;
     }
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:12px}
-    .mark{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+    .hero {
+      position:relative; width:100%; height:100vh; overflow:hidden;
+      display:flex; align-items:center; justify-content:center; flex-direction:column;
+    }
+    .hero svg {
+      position:absolute; inset:0; width:100%; height:100%;
+      z-index:-1;
+    }
+    h1 {font-size:3rem; margin:0;}
+    h2 {font-size:1.4rem; color:var(--muted); margin:10px 0 20px;}
+    a {
+      display:inline-block; padding:12px 20px;
       background:linear-gradient(135deg,var(--accent),var(--accent2));
-      box-shadow:0 10px 30px rgba(0,229,255,.18)}
-    .brand h1{margin:0;font-size:18px;letter-spacing:.6px}
-    .btn{padding:10px 14px;border:1px solid var(--line);border-radius:12px;font-weight:700}
-    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b1330;border:none}
-    .cta{display:flex;gap:10px}
-
-    /* HERO with inline SVG background (can’t break) */
-    .hero{position:relative;overflow:hidden;min-height:72vh}
-    .hero .hero-art{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:-1}
-    .hero .hero-inner{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;padding:72px 0}
-    .title{font-size:clamp(30px,4.5vw,56px);line-height:1.06;margin:0 0 14px;font-weight:800}
-    .subtitle{font-size:clamp(16px,1.3vw,20px);color:var(--muted);max-width:640px}
-    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 26px}
-    .chip{border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px}
-
-    /* Sections */
-    section{padding:48px 0;border-top:1px solid var(--line)}
-    section h2{font-size:28px;margin:0 0 14px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    @media (max-width:900px){ .hero .hero-inner{grid-template-columns:1fr;padding:48px 0} .grid{grid-template-columns:1fr} }
-    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
-    .card h3{margin:0 0 6px}
-    .card p{margin:0;color:var(--muted)}
-
-    footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
+      color:#0b1330; border-radius:10px; font-weight:700;
+      text-decoration:none;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="mark" aria-hidden="true">
-          <!-- minimal flight icon -->
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b1330" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 16l20-8-8 20-2-8-8-4z"/>
-          </svg>
-        </div>
-        <h1>Oracle Aeronautics</h1>
-      </div>
-      <div class="cta">
-        <a class="btn" href="#services">Services</a>
-        <a class="btn primary" href="#contact">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <!-- Inline SVG background -->
-    <svg class="hero-art" viewBox="0 0 1200 520" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+  <div class="hero">
+    <!-- Inline airplane background -->
+    <svg viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="#0f182f"/><stop offset="100%" stop-color="#0a0b0f"/>
@@ -93,13 +47,10 @@
           <stop offset="60%" stop-color="#00e5ff" stop-opacity="0"/>
         </radialGradient>
       </defs>
-      <!-- sky + glow -->
       <rect width="1200" height="520" fill="url(#sky)"/>
       <circle cx="950" cy="220" r="280" fill="url(#halo)"/>
-      <!-- runway -->
       <polygon points="0,520 1200,520 980,360 220,360" fill="#101424"/>
       <rect x="215" y="360" width="770" height="6" fill="#00e5ff" opacity=".25"/>
-      <!-- stylized top-view jet -->
       <g transform="translate(600 260) scale(1.1)" fill="#dfe9ff">
         <rect x="-12" y="-110" width="24" height="160" rx="10"/>
         <path d="M -12 -110 Q 0 -130 12 -110 Z"/>
@@ -110,85 +61,9 @@
       </g>
     </svg>
 
-    <div class="container hero-inner">
-      <div>
-        <h2 class="title">Aircraft maintenance consulting, on your terms.</h2>
-        <p class="subtitle">
-          We help flight departments, managers, and owners keep premium aircraft mission-ready:
-          maintenance programs, prebuy & records, and on-call AOG support — led by a master aircraft mechanic.
-        </p>
-        <div class="badges">
-          <span class="chip">Maintenance Programs</span>
-          <span class="chip">Prebuy & Records</span>
-          <span class="chip">On-Call AOG</span>
-          <span class="chip">Global Coordination</span>
-        </div>
-        <div class="cta">
-          <a class="btn primary" href="#contact">Request availability</a>
-          <a class="btn" href="#about">About</a>
-        </div>
-      </div>
-      <div></div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Maintenance Programs</h3>
-          <p>Planned workscopes, interval optimization, and vendor strategy to reduce downtime and cost without compromising safety.</p>
-        </div>
-        <div class="card">
-          <h3>Prebuy & Records</h3>
-          <p>Technical inspections and digital record audits so you know exactly what you’re buying and operating from day one.</p>
-        </div>
-        <div class="card">
-          <h3>On-Call AOG</h3>
-          <p>Rapid triage and coordination to get your aircraft flying again — with clear communication from first call to release.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <h2>About</h2>
-      <p><strong>Jeremy Hill</strong> — Master Aircraft Mechanic. We pair hands-on experience with straight, responsive communication to keep your aircraft ready when it matters.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <div class="grid" style="grid-template-columns:1.2fr .8fr">
-        <form class="card" action="mailto:oracleaeronautic@gmail.com" method="post" enctype="text/plain">
-          <h3 style="margin-top:0">Request availability</h3>
-          <label>Name<br><input name="Name" required style="width:100%;margin:6px 0 12px;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0f1322;color:var(--ink)"></label>
-          <label>Email<br><input type="email" name="Email" required style="width:100%;margin:6px 0 12px;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0f1322;color:var(--ink)"></label>
-          <label>Message<br><textarea name="Message" rows="5" style="width:100%;margin:6px 0 12px;padding:10px;border-radius:10px;border:1px solid var(--line);background:#0f1322;color:var(--ink)"></textarea></label>
-          <button class="btn primary" type="submit">Email us</button>
-        </form>
-        <div class="card">
-          <h3 style="margin-top:0">Direct</h3>
-          <p class="muted"><a href="mailto:oracleaeronautic@gmail.com" style="color:var(--accent);font-weight:700">oracleaeronautic@gmail.com</a></p>
-          <p class="muted">Location: Houston, TX</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
-      <span>© <span id="year"></span> Oracle Aeronautics</span>
-      <span>All rights reserved.</span>
-    </div>
-  </footer>
-
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+    <h1>Jeremy Hill</h1>
+    <h2>Aircraft Maintenance Consultant</h2>
+    <a href="mailto:oracleaeronautic@gmail.com">oracleaeronautic@gmail.com</a>
+  </div>
 </body>
 </html>
