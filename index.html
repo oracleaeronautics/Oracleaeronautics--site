@@ -34,6 +34,8 @@
     .btn{padding:10px 14px;border:1px solid var(--line);border-radius:12px;font-weight:600}
     .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#0b1330;border:none}/* hero */
 .hero{position:relative;overflow:hidden}
+.hero.bg{background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=80');background-size:cover;background-position:center}
+.hero.bg::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(12,18,34,.85), rgba(12,18,34,.35))}
 .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center;padding:64px 0}
 @media (max-width:900px){.hero-inner{grid-template-columns:1fr;padding:36px 0 24px}}
 .title{font-size:clamp(28px, 4vw + 8px, 54px);line-height:1.06;margin:0 0 14px;font-weight:800}
@@ -84,7 +86,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
       </div>
     </div>
   </header>  <main>
-    <section class="hero">
+    <section class="hero bg">
       <div class="glow" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div>
@@ -102,10 +104,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
           </div>
         </div>
         <div>
-          <div class="dash-card">
-            <!-- Stock Gulfstream-like photo placeholder -->
-            <img src="https://images.unsplash.com/photo-1548611716-55f79216d4b3?q=80&w=1600&auto=format&fit=crop" alt="Gulfstream jet on ramp at sunset">
-          </div>
+          <div class="dash-card" aria-hidden="true" style="display:none"></div>
         </div>
       </div>
     </section><section id="services">
