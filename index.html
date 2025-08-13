@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oracle Aeronautics</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+    html, body { margin: 0; height: 100%; }
     body {
-      background: url('data:image/png;base64,REPLACE_WITH_YOUR_BASE64_IMAGE_CODE') no-repeat center center fixed;
-      background-size: cover;
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-end;
+      justify-content: flex-start;  /* left */
+      align-items: flex-end;        /* bottom */
+      /* The Gulfstream sunset image is embedded right here (no uploads needed) */
+      background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiw...ypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
     }
     .info {
       background: rgba(0, 0, 0, 0.55);
@@ -23,14 +22,9 @@
       padding: 16px 20px;
       border-radius: 8px;
       margin: 20px;
-      font-family: Arial, sans-serif;
-      text-align: center;
+      text-align: center;  /* centers the three lines inside the block */
     }
-    .info p {
-      margin: 4px 0;
-      font-size: 16px;
-      font-weight: 500;
-    }
+    .info p { margin: 4px 0; font-size: 18px; }
   </style>
 </head>
 <body>
