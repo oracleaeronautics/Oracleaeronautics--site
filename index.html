@@ -1,31 +1,31 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Oracle Aeronautics</title>
-  <style>
-    html, body { margin: 0; height: 100%; }
-    body {
-      display: flex;
-      justify-content: flex-start;  /* left */
-      align-items: flex-end;        /* bottom */
-      /* The Gulfstream sunset image is embedded right here (no uploads needed) */
-      background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw4RFiQXFhQUFiw...ypZOzI7WVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlZ') no-repeat center center fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-      color: #ffffff;
-    }
-    .info {
-      background: rgba(0, 0, 0, 0.55);
-      color: white;
-      padding: 16px 20px;
-      border-radius: 8px;
-      margin: 20px;
-      text-align: center;  /* centers the three lines inside the block */
-    }
-    .info p { margin: 4px 0; font-size: 18px; }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Oracle Aeronautics</title>
+<style>
+  html, body { margin:0; height:100%; font-family: Arial, sans-serif; color:#fff; }
+  /* Full-screen background: sunset jet + subtle dark overlay for contrast */
+  body{
+    min-height:100vh;
+    background:
+      linear-gradient(rgba(10,11,16,.55), rgba(10,11,16,.55)),
+      url('https://images.unsplash.com/photo-1548611716-55f79216d4b3?q=80&w=1920&auto=format&fit=crop')
+      no-repeat center center;
+    background-size: cover;
+    position: relative;
+  }
+  /* Bottom-left info block, centered within itself */
+  .info{
+    position: absolute; left: 20px; bottom: 20px;
+    background: rgba(0,0,0,.55);
+    padding: 16px 20px; border-radius: 10px; text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  }
+  .info p{ margin:4px 0; font-size:18px; }
+</style>
 </head>
 <body>
   <div class="info">
